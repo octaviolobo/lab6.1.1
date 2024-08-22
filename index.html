@@ -78,7 +78,7 @@ CCTB - College
 
 
             <blockquote class="blockquote text-center">
-                <h1 class="mb-5 text-danger">{{User's favorite programming language}}</h1>
+                <h1 class="mb-5 text-danger" id="language">{{User's favorite programming language}}</h1>
 
                 <p class="h1 col-10 col-lg-7 m-auto fst-italic text-muted">
                     IST 107 - Introduction to Internet Programming and Web Applications.
@@ -123,6 +123,14 @@ CCTB - College
         <!-- /LOGOUT -->
     </div>
 
+<script>
+    document.getElementById('dialog-box').addEventListener('click', function() {
+        const language = prompt("Please enter your preferred programming language:");
+        if (language) {
+            document.getElementById('language').textContent = language;
+        }
+    });
+</script>
 </body>
 
 </html>
